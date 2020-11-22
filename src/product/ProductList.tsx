@@ -37,8 +37,6 @@ class ProductList extends BaseList<IProps, IState> {
           {this.state.products.map(product => (
             <li key={product.id}>
               <span>{ product.name }</span>
-              <span>{' '}</span>
-              <span>({ product.description })</span>
             </li>
           ))}
         </ol>

@@ -28,7 +28,7 @@ class CustomerList extends BaseList<IProps, IState> {
     }
   }
 
-  render() {
+  renderContent() {
     return (
       <>
         <h2>Customers</h2>
