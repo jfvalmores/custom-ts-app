@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Base from './Base';
 
-class BaseFilter extends Component {
+class BaseFilter<P = {}, S = {}> extends Base<P, S> {
   renderHeader() {
     return null;
   }

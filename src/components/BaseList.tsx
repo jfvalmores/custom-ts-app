@@ -3,21 +3,15 @@ import Base from './Base';
 
 class BaseList<P = {}, S = {}> extends Base<P, S> {
 
-  renderHeader() {
+  renderHeader(): null | JSX.Element {
     return null;
   }
 
-  renderContent() {
-    return (
-      <div>
-        Hey, this is the default render from <b>`BaseList::renderContent`</b>.
-        <br />
-        Reuse this function on your derived class and create your own JSX content.
-      </div>
-    );
+  renderContent(): null | JSX.Element {
+    return null;
   }
 
-  renderFooter() {
+  renderFooter(): null | JSX.Element {
     return null;
   }
 
