@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Base from './Base';
 
-class BaseList<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
+class BaseList<P = {}, S = {}> extends Base<P, S> {
+
   renderHeader() {
     return null;
   }

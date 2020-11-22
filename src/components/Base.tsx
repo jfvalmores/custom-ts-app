@@ -1,13 +1,7 @@
 import { Component } from 'react';
 
-abstract class Base extends Component {
+class Base<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
 
-  abstract renderHeader(): null | JSX.Element;
-
-  abstract renderContent(): null | JSX.Element;
-
-  abstract renderFooter(): null | JSX.Element;
-  
 }
 
 export default Base;
