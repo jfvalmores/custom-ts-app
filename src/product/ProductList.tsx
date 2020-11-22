@@ -2,9 +2,9 @@ import * as React from 'react';
 import BaseList from '../components/BaseList';
 
 interface IProduct {
-  id: number,
-  name: string,
-  description: string,
+  id: number;
+  name: string;
+  description?: string;
 }
 
 interface IState {
@@ -24,7 +24,7 @@ class ProductList extends BaseList<IProps, IState> {
         { id: 2, name: 'Pepsi', description: 'This a pepsi' },
         { id: 3, name: 'Burger', description: 'This a burger' },
         { id: 4, name: 'Pizza', description: 'This a pizza' },
-        { id: 5, name: 'Ice cream', description: 'This an ice cream' },
+        { id: 5, name: 'Ice cream' },
       ]
     };
   }
