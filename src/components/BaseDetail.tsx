@@ -2,13 +2,9 @@ import React from 'react';
 import Base from './Base';
 
 class BaseDetail extends Base {
-  renderPreHeader = () => null;
-
-  renderHeader = () => null;
-
-  renderPostHeader = () => null;
-
-  renderPreContent = () => null;
+  renderHeader() {
+    return null;
+  }
 
   renderContent() {
     return (
@@ -18,13 +14,9 @@ class BaseDetail extends Base {
     );
   }
 
-  renderPostContent = () => null;
-
-  renderPreFooter = () => null;
-
-  renderFooter = () => null;
-
-  renderPostFooter = () => null;
+  renderFooter() {
+    return null;
+  }
 
   render() {
     return (

@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 
-class CList extends Component {
-  render() {
+class BaseList<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
+  renderHeader() {
+    return null;
+  }
+
+  renderContent() {
     return (
       <div>
-        Hey this is from CList
+        Hey this is from BaseList
       </div>
+    );
+  }
+
+  renderFooter() {
+    return null;
+  }
+
+  render() {
+    return (
+      <>
+        {this.renderHeader()}
+        {this.renderContent()}
+        {this.renderFooter()}
+      </>
     );
   }
 }
 
-export default CList;
+export default BaseList;
