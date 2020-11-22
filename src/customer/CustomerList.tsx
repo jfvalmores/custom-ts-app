@@ -20,8 +20,10 @@ class CustomerList extends BaseList<IProps, IState> {
     this.state = {
       customers: [
         { id: 1, name: 'Justine', age: 25 },
-        { id: 1, name: 'Justine', age: 25 },
-        { id: 1, name: 'Justine', age: 25 },
+        { id: 2, name: 'Francis', age: 25 },
+        { id: 3, name: 'Harriete', age: 25 },
+        { id: 4, name: 'Anne', age: 25 },
+        { id: 5, name: 'Marie', age: 25 },
       ]
     }
   }
@@ -31,9 +33,9 @@ class CustomerList extends BaseList<IProps, IState> {
       <>
         <h2>Customers</h2>
         <ul>
-          <li>Justine</li>
-          <li>Francis</li>
-          <li>Harriete</li>
+          {this.state.customers.map(customer => (
+            <li key={customer.id}>{customer.name}</li>
+          ))}
         </ul>
       </>
     );
