@@ -1,22 +1,13 @@
-import React from 'react';
+import * as React from 'react';
+import { Renderer } from '../utils/Types';
 import Base from './Base';
 
 class BaseDetail extends Base {
-  renderHeader() {
-    return null;
-  }
+  renderHeader(): Renderer {}
 
-  renderContent() {
-    return (
-      <div>
-        Hey this is from BaseDetail
-      </div>
-    );
-  }
+  renderContent(): Renderer {}
 
-  renderFooter() {
-    return null;
-  }
+  renderFooter(): Renderer {}
 
   render() {
     return (

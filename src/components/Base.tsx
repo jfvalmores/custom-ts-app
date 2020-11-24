@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Helpers from '../utils/Helpers';
+import { Renderer } from '../utils/Types';
 
-class Base<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
+class Base<P = {}, S = {}, SS = any> extends React.Component<P, S, SS> {
   fn: any;
 
   constructor(props: any) {
@@ -10,15 +11,15 @@ class Base<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
     this.fn = new Helpers();
   }
 
-  renderHeader(): null | JSX.Element {
+  renderHeader(): Renderer {
     return this.getGenericRender('renderHeader');
   }
 
-  renderContent(): null | JSX.Element {
+  renderContent(): Renderer {
     return this.getGenericRender('renderContent');
   }
 
-  renderFooter(): null | JSX.Element {
+  renderFooter(): Renderer {
     return this.getGenericRender('renderFooter');
   }
 
@@ -27,7 +28,8 @@ class Base<P = {}, S = {}, SS = any> extends Component<P, S, SS> {
       <div>
         Hey, this is the default render from <b>`BaseList::{fnSource}`</b>.
         <br />
-        Reuse this function on your derived class and create your own JSX content.
+        Reuse this function on your derived class and create your own JSX
+        content.
       </div>
     );
   }

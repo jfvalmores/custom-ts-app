@@ -1,10 +1,10 @@
 import * as React from 'react';
-import CustomerList from './customer/CustomerList';
-import ProductList from './product/ProductList';
+import CustomerList from './master/customer/CustomerList';
+import ProductList from './master/product/ProductList';
 
 function App() {
   return (
-    <div className="app">
+    <div className='app'>
       <h1>Hello world! This is my app.</h1>
       <ProductList />
       <CustomerList />

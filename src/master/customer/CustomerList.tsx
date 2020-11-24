@@ -1,38 +1,42 @@
 import * as React from 'react';
 import BaseList from '../../components/BaseList';
 
-interface ICustomer {
+interface Customer {
   id: number;
   name: string;
   age?: number;
   offer?: boolean;
 }
 
-interface IState {
-  customers: ICustomer[];
+interface State {
+  customers: Customer[];
 }
 
-interface IProps {}
+interface Props {}
 
-class CustomerList extends BaseList<IProps, IState> {
-  state = {
-    customers: [
-      { id: 1, name: 'Justine', age: 25, offer: true },
-      { id: 2, name: 'Francis', age: 25 },
-      { id: 3, name: 'Harriete', age: 25, offer: true },
-      { id: 4, name: 'Anne', age: 25 },
-      { id: 5, name: 'Marie', age: 25 },
-    ],
-  };
+class CustomerList extends BaseList<Props, State> {
+  constructor(props: Props) {
+    super(props);
 
-  getNameLabel = (customer: ICustomer): string => {
+    this.state = {
+      customers: [
+        { id: 1, name: 'Justine', age: 25, offer: true },
+        { id: 2, name: 'Francis', age: 25 },
+        { id: 3, name: 'Harriete', age: 25, offer: true },
+        { id: 4, name: 'Anne', age: 25 },
+        { id: 5, name: 'Marie', age: 25 },
+      ],
+    };
+  }
+
+  getNameLabel = (customer: Customer): string => {
     return (
       customer.name +
       (customer.offer ? ' (We have a special offer just for you!)' : '')
     );
   };
 
-  renderContent() {
+  render() {
     return (
       <>
         <h2>Customers</h2>

@@ -1,28 +1,35 @@
 import * as React from 'react';
 import BaseList from '../../components/BaseList';
 
-interface IProduct {
+interface Product {
   id: number;
   name: string;
   description?: string;
 }
 
-interface IState {
-  products: IProduct[];
+interface State {
+  products: Product[];
 }
 
-interface IProps {}
+interface Props {}
 
-class ProductList extends BaseList<IProps, IState> {
-  state = {
-    products: [
-      { id: 1, name: 'Coke', description: 'This a coke' },
-      { id: 2, name: 'Pepsi', description: 'This a pepsi' },
-      { id: 3, name: 'Burger', description: 'This a burger' },
-      { id: 4, name: 'Pizza', description: 'This a pizza' },
-      { id: 5, name: 'Ice cream' },
-    ],
-  };
+class ProductList extends BaseList<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      products: [
+        { id: 1, name: 'Coke', description: 'This a coke' },
+        { id: 2, name: 'Pepsi', description: 'This a pepsi' },
+        { id: 3, name: 'Burger', description: 'This a burger' },
+        { id: 4, name: 'Pizza', description: 'This a pizza' },
+        { id: 5, name: 'Ice cream' },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    // mock http GET request
+  }
 
   renderContent() {
     return (

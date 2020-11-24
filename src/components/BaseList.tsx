@@ -1,19 +1,17 @@
-import React from 'react';
+import * as React from 'react';
+import { Renderer } from '../utils/Types';
 import Base from './Base';
 
 class BaseList<P = {}, S = {}> extends Base<P, S> {
+  renderHeader(): Renderer {}
 
-  renderHeader(): null | JSX.Element {
-    return null;
-  }
+  renderContent(): Renderer {}
 
-  renderContent(): null | JSX.Element {
-    return null;
-  }
+  renderFooter(): Renderer {}
 
-  renderFooter(): null | JSX.Element {
-    return null;
-  }
+  getFilter(): Renderer {}
+
+  getDetail(): Renderer {}
 
   render() {
     return (
