@@ -3,7 +3,7 @@ import Helpers from '../utils/Helpers';
 import { Renderer } from '../utils/Types';
 
 class Base<P = {}, S = {}, SS = any> extends React.Component<P, S, SS> {
-  fn: any;
+  protected fn: any;
 
   constructor(props: any) {
     super(props);

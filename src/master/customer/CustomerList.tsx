@@ -1,3 +1,4 @@
+import { Heading } from '@chakra-ui/react';
 import * as React from 'react';
 import BaseList from '../../components/BaseList';
 
@@ -39,7 +40,9 @@ class CustomerList extends BaseList<Props, State> {
   render() {
     return (
       <>
-        <h2>Customers</h2>
+        <Heading as='h2' size='xl' m='.3em 0'>
+          Customers
+        </Heading>
         <ul>
           {this.state.customers.map((customer) => (
             <li key={customer.id}>{this.getNameLabel(customer)}</li>
