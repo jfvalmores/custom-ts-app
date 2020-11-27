@@ -1,5 +1,5 @@
 import * as React from 'react';
-import BaseList from '../../components/BaseList';
+import BaseList from '../../../components/BaseList';
 
 class CompanyList extends BaseList {
   renderContent() {
