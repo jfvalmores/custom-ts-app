@@ -1,4 +1,4 @@
-import BaseFilter from '../../components/BaseFilter';
+import BaseFilter from '../../../components/base/BaseFilter';
 
 class ProductFilter extends BaseFilter {}
 

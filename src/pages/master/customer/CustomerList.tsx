@@ -1,6 +1,6 @@
 import { Heading } from '@chakra-ui/react';
 import * as React from 'react';
-import BaseList from '../../components/BaseList';
+import BaseList from '../../../components/base/BaseList';
 
 interface Customer {
   id: number;
@@ -40,7 +40,7 @@ class CustomerList extends BaseList<Props, State> {
   render() {
     return (
       <>
-        <Heading as='h2' size='xl' m='.3em 0'>
+        <Heading as="h2" size="xl" m=".3em 0">
           Customers
         </Heading>
         <ul>

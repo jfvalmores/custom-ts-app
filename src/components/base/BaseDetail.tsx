@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Renderer } from '../utils/Types';
+import { Renderer } from '../../utils/Types';
 import Base from './Base';
 
 class BaseDetail extends Base {

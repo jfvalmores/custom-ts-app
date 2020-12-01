@@ -1,17 +1,13 @@
 import * as React from 'react';
-import { Renderer } from '../utils/Types';
+import { Renderer } from '../../utils/Types';
 import Base from './Base';
 
-class BaseList<P = {}, S = {}> extends Base<P, S> {
+class BaseFilter<P = {}, S = {}> extends Base<P, S> {
   renderHeader(): Renderer {}
 
   renderContent(): Renderer {}
 
   renderFooter(): Renderer {}
-
-  getFilter(): Renderer {}
-
-  getDetail(): Renderer {}
 
   render() {
     return (
@@ -24,4 +20,4 @@ class BaseList<P = {}, S = {}> extends Base<P, S> {
   }
 }
 
-export default BaseList;
+export default BaseFilter;

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Helpers from '../utils/Helpers';
-import { Renderer } from '../utils/Types';
+import Helpers from '../../utils/Helpers';
+import { Renderer } from '../../utils/Types';
 
 class Base<P = {}, S = {}, SS = any> extends React.Component<P, S, SS> {
   protected fn: any;
